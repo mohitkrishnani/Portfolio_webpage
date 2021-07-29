@@ -14,6 +14,7 @@ header{
 	padding-left: 5%;
 	font-size: 20px;
 	background-color: #3d5a80;
+	z-index:999;
 }
 
 #logo{
@@ -63,8 +64,9 @@ ul>li>a{
 	width:25%;
 	background-color:#3d5a80;
 	box-shadow: 0 6px 12px rgba(0,0,255,1);
-	animation-name: opaque;
-	animation-duration: 4s;
+	//animation-name: opaque;
+	//animation-duration: 2s;
+	//animation-iteration-count: 1;
 }
 .profile-card>img{
 	margin:10%;
@@ -73,7 +75,34 @@ ul>li>a{
 	box-shadow: 0 6px 12px rgba(0,0,78,0.5);
 	
 }
+@keyframes profilehover{
+	from{
+		transform: scaleX(1) scaleY(1);
+		
+	}
+	to{
+		transform: scaleX(1.1) scaleY(1.1);
+	}
+	
+}
+.profile-card:hover{
+	
+	animation-name: profilehover;
+	animation-duration: 2s;
+	transform:scaleX(1.1) scaleY(1.1);
+}
 
+.intro{
+	width:10%;
+	color:#111111;
+	position:absolute;
+	top: 60%;
+	left: 55%;
+	color: #3d5a80;
+	background-color: #f4f3f3;
+	padding:12px;
+	border-radius: 0 30px 30px 30px;
+}
 
 .work-exp{
 	
